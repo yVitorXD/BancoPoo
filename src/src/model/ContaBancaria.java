@@ -1,5 +1,7 @@
 package src.model;
+import src.model.Movimentacao;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.InputMismatchException;
 
@@ -8,17 +10,19 @@ public abstract class ContaBancaria {
 
 
 	//Atributos
-	private String agencia;
+	protected String agencia;
 	
-	private String conta;
+	protected String conta;
 	
-	private int digito;
+	protected int digito;
 	
-	private Double saldo;
+	protected Double saldo;
 	
-	private Date dataAbertura;
+	protected Date dataAbertura;
 	
-	private Double VALOR_MINIMO_DEPOSITO = 10.0;
+	protected ArrayList<Movimentacao> movimentacoes;
+	
+	protected Double VALOR_MINIMO_DEPOSITO = 10.0;
 	
 	//metodos
 	public void depositar(Double valor) {
@@ -31,6 +35,10 @@ public abstract class ContaBancaria {
 		
 		// Efetua o deposito somando o valor ao saldo
 		this.saldo += valor;
+		
+		// aqui faço uma movimentacao no extrato
+		Movimentacao movimentacao = new Movimentacao("Deposito", valor);
+		this.movimentacoes.add(movimentacao);
 	}
 	
 	public Double sacar(Double valor) {
@@ -43,8 +51,14 @@ public abstract class ContaBancaria {
 		//aqui removes o valor de saque do saldo atual
 		this.saldo -= valor;
 		
+		// Movimentacao no extrato.
+		Movimentacao movimentacao = new Movimentacao("Deposito", valor);
+		this.movimentacoes.add(movimentacao);
+		
 		// aqui retorna o valor sacado ao usuario
 		return valor;
+		
+		
 		
 	}
 
@@ -70,6 +84,17 @@ public abstract class ContaBancaria {
 		this.digito = digito;
 		this.saldo = saldoInicial;
 		this.dataAbertura = new Date();		
+		
+		// se nao instanciar, vai dar uma exception de nullPointerException
+		this.movimentacoes = new ArrayList<Movimentacao>();
+		
+		// Criando a primeira movimentacao;
+		Movimentacao movimentacao = new Movimentacao("Abertura de Conta", saldoInicial);
+		
+		
+		// Aqui estou salvando a movimentacao dentro do meu array de movimentacoes
+		//Aqui estou iniciando o meu extrato bancario
+		this.movimentacoes.add(movimentacao);
 	}
 	
 	
@@ -106,7 +131,7 @@ public abstract class ContaBancaria {
 		return dataAbertura;
 	}
 
-
+	public abstract void imprimirExtrato();
 	
 	
 	

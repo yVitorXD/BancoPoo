@@ -51,7 +51,10 @@ public class App {
 		System.out.println();
 		Movimentacao movimentacao = new Movimentacao("Saque", 100.0);
 		
-		System.out.println(movimentacao);
+		contaPoupanca.imprimirExtrato();
+		contaCorrente.imprimirExtrato();
+		
+		
 	}
 	
 }

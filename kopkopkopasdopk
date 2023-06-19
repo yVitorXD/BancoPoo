@@ -1,0 +1,29 @@
+[33mcommit 46cd8628a3492db3d2479bc5a98229d90988e0e3[m[33m ([m[1;36mHEAD -> [m[1;32mfeat-heranca[m[33m)[m
+Author: yVitorXD <vitorxdxx@gmail.com>
+Date:   Mon Jun 19 12:13:16 2023 -0300
+
+    Movimentação, Override, toString
+
+[33mcommit ed3f63a70b8e448923812a2078cb98c7cb2c4e57[m[33m ([m[1;31morigin/feat-heranca[m[33m)[m
+Author: yVitorXD <vitorxdxx@gmail.com>
+Date:   Mon Jun 19 11:21:45 2023 -0300
+
+    Model Bancos, Utils hora
+
+[33mcommit c4a56ac2acd5870573837cda950c6328cada19e8[m
+Author: yVitorXD <vitorxdxx@gmail.com>
+Date:   Mon Jun 19 09:34:27 2023 -0300
+
+    Models e App
+
+[33mcommit eb1cba6bace5677c78f2f8f21f04e998ed20c790[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: yVitorXD <vitorxdxx@gmail.com>
+Date:   Sat Jun 17 15:39:25 2023 -0300
+
+    Primeiro Commit
+
+[33mcommit 837762eb30e72c845b0a1927a796435a1a981d1c[m
+Author: Vitor Abreu <103855573+yVitorXD@users.noreply.github.com>
+Date:   Sat Jun 17 15:36:05 2023 -0300
+
+    Initial commit

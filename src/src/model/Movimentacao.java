@@ -36,8 +36,12 @@ public class Movimentacao {
 		return valor;
 	}
 
+	
 	@Override
 	public String toString() {
+		// sobreescrevremos o metodo toString
+		
+		
 		// Aqui eu crio a String dataFormatada, chamo meu metodo estatico DataUtil
 		// como valor seleciono this.getData, depois retorno esse this.getData
 		// Retorno ele como dataFormatada
