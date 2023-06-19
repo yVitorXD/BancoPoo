@@ -1,6 +1,7 @@
 import src.model.ContaBancaria;
 import src.model.ContaCorrente;
 import src.model.ContaPoupanca;
+import src.model.Movimentacao;
 import src.utils.DataUtil;
 
 public class App {
@@ -44,7 +45,13 @@ public class App {
 		System.out.println(f3);
 		
 		
+		// Extrato bancario é composto por movimentaçoes bancarias
+		// Ter algo que possa ser a movimentaçao
+		// Ter uma lista de movimentaçoes.
+		System.out.println();
+		Movimentacao movimentacao = new Movimentacao("Saque", 100.0);
 		
+		System.out.println(movimentacao);
 	}
 	
 }
